@@ -1,0 +1,14 @@
+---
+- apt_repository:
+    repo: deb http://ftp.debian.org/debian jessie-backports main
+    state: present
+    filename: 'backports'
+
+- name: Update apt cache and Install certbot
+  apt:
+    name: certbot
+    default_release: jessie-backports
+    update_cache: yes
+
+- name: Generates a stronger dhparam key
+  command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048 creates=/etc/ssl/certs/dhparam.pem

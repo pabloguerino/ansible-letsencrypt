@@ -1,0 +1,7 @@
+---
+
+letsencrypt_email: admin@{{ ansible_hostname }}
+letsencrypt_rsa_size: 4096
+letsencrypt_command: "certbot certonly -n -a webroot --expand --agree-tos -m {{ letsencrypt_email }} --rsa-key-size {{ letsencrypt_rsa_size }}"
+
+letsencrypt_domains: []

@@ -1,0 +1,22 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: pabloguerino
+  description: Letsencrypt certificates for Debian
+  company: "JadeLabs"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.8
+  platforms:
+    - name: Debian
+      versions:
+      - all
+    - name: Ubuntu
+      versions:
+      - all
+  galaxy_tags:
+    - ssl
+    - letsencrypt
+    - https
+    - web
+    - development

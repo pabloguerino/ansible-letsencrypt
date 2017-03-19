@@ -1,0 +1,4 @@
+---
+- name: Generates SSL Certificates
+  command: "{{ letsencrypt_command }} -w {{ item.webroot }} -d {{ item.domains }}"
+  with_items: "{{ letsencrypt_domains }}"
