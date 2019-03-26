@@ -1,13 +1,13 @@
 ---
 - apt_repository:
-    repo: deb http://ftp.debian.org/debian jessie-backports main
+    repo: deb http://ftp.debian.org/debian stretch-backports main
     state: present
     filename: 'backports'
 
 - name: Update apt cache and Install certbot
   apt:
     name: certbot
-    default_release: jessie-backports
+    default_release: stretch-backports
     update_cache: yes
 
 - name: Generates a stronger dhparam key
